@@ -6,7 +6,14 @@ var cors = require('cors')
 const app = express(); 
 const PORT = 5000;
 
-app.use(cors())
+
+const corsOptions = {
+  origin: 'https://trade-holdinfo.vercel.app/',
+  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+
+
+app.use(cors(corsOptions))
 
 const mongoURL = 'mongodb+srv://vivekthakur6259:vivek123456@trade-center.lhlmgow.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(mongoURL);
