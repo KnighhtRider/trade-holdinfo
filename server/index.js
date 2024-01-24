@@ -7,13 +7,13 @@ const app = express();
 const PORT = 5000;
 
 
-const corsOptions = {
-  origin: 'https://trade-holdinfo.vercel.app',
-  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
+// const corsOptions = {
+//   origin: 'https://trade-holdinfo.vercel.app',
+//   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+// }
 
-
-app.use(cors(corsOptions))
+ 
+app.use(cors())
 
 const mongoURL = 'mongodb+srv://vivekthakur6259:vivek123456@trade-center.lhlmgow.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(mongoURL);
