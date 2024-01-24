@@ -10,7 +10,7 @@ const PORT = 5000;
 const corsOptions = {
   origin: 'https://trade-holdinfo.vercel.app',
   methods: ["POST", "GET"],
-  credential: true
+  credentials: true
 }
 
  
