@@ -34,36 +34,38 @@ const tradeSchema = new mongoose.Schema({
 const Trade = mongoose.model('Trade', tradeSchema);
 
 
-app.get('/', async (req, res) => {
+// app.get('/', async (req, res) => {
   
-  const api_data = await axios.get('https://api.wazirx.com/api/v2/tickers');
+//   const api_data = await axios.get('https://api.wazirx.com/api/v2/tickers');
 
-    // Extract the top 10 trade data from the api_data
-    const data = Object.values(api_data.data).slice(0, 10); 
+//     // Extract the top 10 trade data from the api_data
+//     const data = Object.values(api_data.data).slice(0, 10); 
 
-    // Save each top 10 trade data to the database
-    for (const tradeData of data) {
-      const trade = new Trade({
-        name: tradeData.name,
-        last: tradeData.last,
-        buy: tradeData.buy,
-        sell: tradeData.sell,
-        volume: tradeData.volume,
-        base_unit: tradeData.base_unit,
-      });
+//     // Save each top 10 trade data to the database
+//     for (const tradeData of data) {
+//       const trade = new Trade({
+//         name: tradeData.name,
+//         last: tradeData.last,
+//         buy: tradeData.buy,
+//         sell: tradeData.sell,
+//         volume: tradeData.volume,
+//         base_unit: tradeData.base_unit,
+//       });
 
-      await trade.save();
-    }
+//       await trade.save();
+//     }
 
     
-    // Send the top 10 trade data as a JSON response
-    res.json(data);
+//     // Send the top 10 trade data as a JSON response
+//     res.json(data);
 
-})
+// })
 
 // Create a new route to fetch the stored data from the database
 
-
+app.get('/', (req, res) => {
+  res.send('Hello');
+})
 
 app.get('/trades', async (req, res) => {
   try {
