@@ -8,7 +8,7 @@ const PORT = 5000;
 
 
 const corsOptions = {
-  origin: 'https://trade-holdinfo.vercel.app/',
+  origin: 'https://trade-holdinfo.vercel.app',
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
