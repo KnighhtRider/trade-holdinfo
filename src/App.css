@@ -1,38 +1,360 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.telegram-logo {
+  height: 15px;
+  margin-right: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 960px) {
+  .header-button,
+  .header-telegram-button {
+    font-size: 14px;
+    padding: 5px 10px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.margin-10 {
+  margin: 10px;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+  font-size: 15px;
+}
+
+.theme-light .slider.round {
+  box-shadow: 0 0 2px #ddd;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.theme-light .slider {
+  background-color: #f8f9fa;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+body {
+  background-color: #191d28; /* Your default background color */
+  transition: background-color 0.5s ease; /* Add a smooth transition effect */
+}
+
+.switch input:checked ~ body {
+  background-color: #fff; /* Change to white or your desired color */
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.theme-dark input:checked + .slider {
+  background-color: #2e3241;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.theme-dark .slider:before {
+  background-color: #3dc6c1;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  transition: 0.4s;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.theme-dark .fiat-crypto-table tbody td:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.color-green {
+  color: #5dc7c2;
+}
+
+/* Mobile devices */
+.average-header-maintext {
+  font-size: 18px;
+}
+
+/* Tablets */
+@media screen and (min-width: 600px) {
+  .average-header-maintext {
+    font-size: 24px;
+  }
+}
+
+/* Desktops */
+@media screen and (min-width: 1024px) {
+  .average-header-maintext {
+    font-size: 30px;
+  }
+}
+
+/* Mobile devices */
+.average-header-subHeading {
+  font-size: 14px;
+}
+
+/* Tablets */
+@media screen and (min-width: 600px) {
+  .average-header-subHeading {
+    font-size: 18px;
+  }
+}
+
+/* Desktops */
+@media screen and (min-width: 1024px) {
+  .average-header-subHeading {
+    font-size: 22px;
+  }
+}
+
+/* Mobile devices */
+.average-subText {
+  font-size: 12px;
+}
+
+/* Tablets */
+@media screen and (min-width: 600px) {
+  .average-subText {
+    font-size: 16px;
+  }
+}
+
+/* Desktops */
+@media screen and (min-width: 1024px) {
+  .average-subText {
+    font-size: 15px;
+  }
+}
+
+/* Default styles */
+.pointer {
+  cursor: pointer;
+  color: #636060; /* Default color */
+  font-size: 16px; /* Default font size */
+  font-weight: bold; /* Default font weight */
+  text-decoration: none; /* Default text decoration */
+}
+
+/* Mobile devices */
+@media screen and (max-width: 767px) {
+  .pointer {
+    font-size: 14px; /* Change font size for mobile */
+    font-style: italic; /* Add italic style for mobile */
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .pointer {
+    font-size: 18px; /* Change font size for tablets */
+    text-transform: uppercase; /* Add uppercase text for tablets */
+  }
+}
+
+/* Desktops */
+@media screen and (min-width: 1024px) {
+  .pointer {
+    font-size: 20px; /* Change font size for desktops */
+    font-weight: 400px;
+    letter-spacing: 2px; /* Add letter spacing for desktops */
+  }
+}
+
+/* Mobile devices */
+.average-heading {
+  font-size: 18px;
+}
+
+/* Tablets */
+@media screen and (min-width: 600px) {
+  .average-heading {
+    font-size: px;
+  }
+}
+
+/* Desktops */
+@media screen and (min-width: 1024px) {
+  .average-heading {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fiat-logo {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .fiat-logo {
+    width: 100%;
+  }
+}
+
+.fiat-logo {
+  width: 80%;
+}
+
+.theme-dark {
+  position: relative;
+  background: #191d28;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  color: #fff;
+  font-family: Oswald, sans-serif;
+}
+
+/* Table body styles */
+.table-responsive tbody {
+  overflow-y: auto;
+  max-height: 300px;
+  background-color: #242834; /* Body background color */
+}
+
+.table-responsive th,
+.table-responsive td {
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Table body cells styles */
+.table-responsive td {
+  padding: 15px;
+  font-weight: 200;
+  border-bottom: 1px solid #242834; /* Body border color */
+}
+
+/* Zebra striping for table rows */
+/* .table-responsive tbody tr:nth-child(odd) {
+  background-color: #242834; 
+} */
+
+.table-responsive table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 1em;
+  margin: 0;
+  overflow-x: auto;
+}
+
+/* Table body cells styles */
+.table-responsive td {
+  padding: 15px;
+  border-bottom: 1px solid #2c303d;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.theme-dark .fiat-crypto-table {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.fiat-crypto-table {
+  padding: 0 10px !important;
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.theme-dark .fiat-crypto-table table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 1em;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .exchange-logo {
+    height: 10px;
+    width: 10px;
+  }
+}
+
+.exchange-logo {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+}
+
+.footer {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  bottom: 0;
+  padding: 13px;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.theme-dark .footer {
+  border-top: 2px solid #2e3241;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.align-items-center {
+  align-items: center!important;
+}
+
+.text-center {
+  text-align: center!important;
+}
+
+.footer-text {
+  
+  white-space: nowrap;
+  padding-right: 50px;
+  font-size: 12px;
+  font-weight: 400;
 }
