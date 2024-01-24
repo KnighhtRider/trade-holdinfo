@@ -22,7 +22,7 @@ function App() {
 
   useEffect(() => {
     // Fetch data from the /trades endpoint
-    axios.get("https://trade-holdinfo-3kf1.vercel.app/trades").then((response) => {
+    axios.get("http://localhost:5000/trades").then((response) => { 
       setTrades(response.data);
     });
   }, []);
